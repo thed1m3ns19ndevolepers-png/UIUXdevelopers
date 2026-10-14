@@ -1,0 +1,74 @@
+feature,area,priority,original,clone,notes
+Sign up with email or Google,auth,must,yes,no,
+Sign in and session handling,auth,must,yes,no,
+Forgot and reset password,auth,should,yes,no,
+Free credits granted on signup,onboarding,should,yes,no,vendor grants 50 credits
+Guided agent builder from plain language,onboarding,should,yes,no,their "Swara HR" conversational setup
+Create an AI employee with a name and role,agent,must,yes,no,
+Pick a voice from a library,agent,must,yes,no,your own voices not theirs
+Voice quality tiers at different per-minute rates,agent,should,yes,no,Value Standard Premium
+Write and edit the call script or prompt,agent,must,yes,no,
+Define fields the agent must capture,agent,must,yes,no,"e.g. budget, timeline"
+Choose language mode for the agent,agent,must,yes,no,Telugu+English or English only
+Pause and resume an employee,agent,should,yes,no,
+Test call to your own phone before going live,agent,must,yes,no,the whole top-of-funnel demo
+Provision a dedicated +91 calling number,telephony,must,yes,skip,licensed carrier or CPaaS; you rent a number you do not issue one
+KYC flow for the number,telephony,must,yes,partial,you build the UI; the verification is the provider's
+DLT registration for outbound headers,compliance,must,yes,skip,TRAI-regulated; register your own entity
+DNC and do-not-call screening,compliance,must,yes,partial,enforce it in your dialer; the registry itself is regulated
+Place an outbound call over a real phone line,telephony,must,yes,no,via carrier API
+Natural duplex conversation with low latency,voice,must,yes,no,the actual product; target under ~1.4s
+Barge-in so the caller can interrupt the agent,voice,must,yes,no,
+Code-switching between Telugu and English mid-sentence,voice,must,yes,no,hardest single feature
+Multiple Indian languages,voice,should,yes,no,"home claims 10+; pricing page says Telugu+English only"
+Call a new lead within 30 seconds of arrival,core,must,yes,no,speed is the entire value proposition
+Receive leads by webhook,integrations,must,yes,no,
+Receive leads from Meta and Instagram lead ads,integrations,should,yes,no,official Meta API only
+Receive leads from a website form,integrations,should,yes,no,
+Retry on no answer,reliability,must,yes,no,
+Auto-reschedule on busy,reliability,should,yes,no,"10:00 busy, retried 17:00"
+Recover mid-call from network jitter,reliability,could,yes,no,their "self-healing" claim
+Record the call,calls,must,yes,no,with consent and retention rules
+Timestamped turn-by-turn transcript,calls,must,yes,no,
+AI summary of each call,calls,must,yes,no,
+Extract structured fields from the conversation,calls,must,yes,no,
+Sentiment on each call,calls,should,yes,no,
+Talk-ratio metric,calls,could,yes,no,
+Classify the call outcome,calls,must,yes,no,
+Call log listing every call,calls,must,yes,no,
+Credits used shown per call,billing,must,yes,no,their stated anti-bill-shock feature
+Call detail view with player and transcript,calls,must,yes,no,
+Correct an extracted field by hand,calls,could,no,no,not seen in their product; a likely improvement
+Send a WhatsApp message during the call,actions,should,yes,no,official WhatsApp Business API
+Book a calendar slot during the call,actions,should,yes,no,Google Calendar API
+Transfer the live call to a human,actions,should,yes,no,blind and warm
+Call a custom API mid-conversation,actions,could,yes,no,
+Remember a returning caller and their context,calls,should,yes,no,"the welcome back behaviour"
+Lead and contact database,leads,must,yes,no,
+Upload a CSV for a bulk campaign,campaigns,should,yes,no,
+Map CSV columns to agent variables,campaigns,should,yes,no,
+Dial many numbers concurrently,campaigns,should,yes,no,"claims vary: 20, 30, 100+"
+Respect a calling window,campaigns,should,yes,no,
+Monitor campaign progress live,campaigns,should,yes,no,
+Export campaign results,campaigns,should,yes,no,
+Answer inbound calls 24/7,inbound,could,partial,no,marked coming soon on their home page
+Push call data to a CRM,integrations,should,yes,no,"Salesforce, HubSpot, Zoho via official APIs"
+Sync results to Google Sheets,integrations,should,yes,no,
+Pabbly Connect and Zapier automation,integrations,could,yes,no,
+Credit wallet with top-up,billing,must,yes,no,1 credit = ₹1
+Bill per connected second rounded to 30s blocks,billing,must,yes,no,
+Do not bill ring time or unanswered calls,billing,must,yes,no,
+Graceful goodbye when credits run out mid-call,billing,could,yes,no,nice touch worth keeping
+Low balance warning,billing,should,yes,no,
+Invoices and usage history,billing,should,yes,no,
+Dashboard with headline stats,dashboard,must,yes,no,"employees working, conversations, qualified leads, credits spent"
+Per-employee performance on the dashboard,dashboard,should,yes,no,calls today and a status
+Needs-attention nudges,dashboard,could,yes,no,"hot leads waiting, KYC pending, agent underperforming"
+Campaign and usage analytics,analytics,should,yes,no,
+Team members and roles,settings,could,yes,no,
+Legal pages,settings,must,yes,no,"terms, privacy, refund"
+99.9% uptime SLA,ops,could,yes,skip,a commercial promise backed by infrastructure spend not a feature
+Their tuned Telugu voice models,voice,must,yes,skip,their moat; use your own vendor and your own tuning
+Their exclusive premium voice library,voice,could,yes,skip,licensed or proprietary voices
+Their customer call recordings and lead data,data,could,yes,skip,their customers' data
+Published single honest price,pricing,should,no,no,they publish five different price points; an opening for you
